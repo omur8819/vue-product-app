@@ -13,16 +13,16 @@
           <div class="card-body">
             <div class="form-group">
               <label>Product Name</label>
-              <input type="text" v-model="product.title" class="form-control" placeholder="Enter name">
+              <input type="text" v-model="product.title" class="form-control" placeholder="Enter Product Name">
             </div>
             <div class="row">
               <div class="form-group col-md-6">
                 <label>Product Count</label>
-                <input type="text" v-model="product.count" class="form-control" placeholder="Enter count">
+                <input type="text" v-model="product.count" class="form-control" placeholder="Enter Count">
               </div>
               <div class="form-group col-md-6">
                 <label>Product Price</label>
-                <input type="text" v-model="product.price" class="form-control" placeholder="Enter price">
+                <input type="text" v-model="product.price" class="form-control" placeholder="Enter Price">
               </div>
             </div>
             <button @click="addProduct" class="btn btn-outline-info btn-block">Add Product</button>
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+    import { eventBus } from '../main';
     export default{
         data: function(){
             return{
@@ -53,7 +54,7 @@
             },
             addProduct(){
                 this.product.totalPrice = this.product.count * this.product.price;
-                console.log(this.product);
+                eventBus.$emit("productAdded", this.product);
             },
         },
         
