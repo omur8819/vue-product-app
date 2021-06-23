@@ -13,16 +13,16 @@
           <div class="card-body">
             <div class="form-group">
               <label>Product Name</label>
-              <input type="text" v-model="product.title" class="form-control" placeholder="enter name">
+              <input type="text" v-model="product.title" class="form-control" placeholder="Enter name">
             </div>
             <div class="row">
               <div class="form-group col-md-6">
                 <label>Product Count</label>
-                <input type="text" v-model="product.count" class="form-control" placeholder="enter count">
+                <input type="text" v-model="product.count" class="form-control" placeholder="Enter count">
               </div>
               <div class="form-group col-md-6">
                 <label>Product Price</label>
-                <input type="text" v-model="product.price" class="form-control" placeholder="enter price">
+                <input type="text" v-model="product.price" class="form-control" placeholder="Enter price">
               </div>
             </div>
             <button @click="addProduct" class="btn btn-outline-info btn-block">Add Product</button>
