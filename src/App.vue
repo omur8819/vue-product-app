@@ -6,8 +6,6 @@
     <br><br>
     <app-progress></app-progress>
     <br><br>
-    <h3 class="text-center">List of Added Products</h3>
-    <hr>
     <app-products></app-products>
   </div>
 
@@ -28,7 +26,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   body {
     background-color: aliceblue;
     padding-top: 20px;

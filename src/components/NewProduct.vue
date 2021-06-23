@@ -55,6 +55,13 @@
             addProduct(){
                 this.product.totalPrice = this.product.count * this.product.price;
                 eventBus.$emit("productAdded", this.product);
+                this.product = {
+                    title: null,
+                    count: null,
+                    price: null,
+                    totalPrice: null,
+                    selectedImage: null,
+                }
             },
         },
         
